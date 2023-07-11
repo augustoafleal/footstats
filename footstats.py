@@ -30,7 +30,9 @@ for th in tableStatsColumns:
         age = data[6].string
         games = data[7].string
         games_starts = data[8].string
-        minutes = data[9].string.replace(",", "")
+        minutes = data[9].string
+        if (minutes):
+            minutes = data[9].string.replace(",", "")
         minutes_90s = data[10].string
         goals = data[11].string
         assists = data[12].string
