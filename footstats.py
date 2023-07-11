@@ -30,7 +30,7 @@ for th in tableStatsColumns:
         age = data[6].string
         games = data[7].string
         games_starts = data[8].string
-        minutes = data[9].string
+        minutes = data[9].string.replace(",", "")
         minutes_90s = data[10].string
         goals = data[11].string
         assists = data[12].string
@@ -70,7 +70,7 @@ for th in tableStatsColumns:
             npxg_xg_assist_per90
         ])
 
-# Create DB connection
+#  Create DB connection
 conn = psycopg2.connect(
     database="DB_footStats",
     user=dbconfigs.username,
