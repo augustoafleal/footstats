@@ -1,0 +1,1 @@
+SELECT cron.schedule_in_database('Summary Playerstats', '00 06 * * *', 'CALL stp_summary_playerstats()', 'DB_footStats');
